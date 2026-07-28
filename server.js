@@ -24,7 +24,7 @@ if (fs.existsSync(distPath)) {
 }
 
 // Для всех остальных запросов возвращаем index.html (SPA routing)
-app.get('*all', (req, res) => {
+app.use((req, res) => {
   const indexPath = path.join(distPath, 'index.html');
   if (fs.existsSync(indexPath)) {
     res.sendFile(indexPath);
