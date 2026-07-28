@@ -95,7 +95,7 @@ export default function Projects() {
                       const target = e.currentTarget;
                       if (!target.dataset.fallback) {
                         target.dataset.fallback = 'true';
-                        target.src = `https://api.microlink.io/?url=https%3A%2F%2F${project.domain}&screenshot=true&meta=false&embed=screenshot.url`;
+                        target.src = project.id === 'amkar-junior' ? '/amkar.jpg' : `https://api.microlink.io/?url=https%3A%2F%2F${project.domain}&screenshot=true&meta=false&embed=screenshot.url`;
                       }
                     }}
                   />
