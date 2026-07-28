@@ -1,0 +1,6 @@
+{
+  "name": "Zaguzov-IT Portfolio",
+  "description": "Портфолио IT-компании Zaguzov-IT: разработка инновационных решений, аналитика и автоматизация.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
