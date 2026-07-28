@@ -84,19 +84,22 @@ export default function Projects() {
                 <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* Screenshot Container */}
-                <div className="relative w-full h-44 sm:h-56 md:h-60 lg:h-64 rounded-[1.25rem] sm:rounded-[1.5rem] overflow-hidden bg-zinc-950 mb-4 border border-zinc-800/50">
-                  <div className="absolute inset-0 bg-zinc-800 animate-pulse" />
+                <div className="relative w-full h-48 sm:h-60 md:h-64 lg:h-72 rounded-[1.25rem] sm:rounded-[1.5rem] overflow-hidden bg-zinc-950 mb-4 border border-zinc-800/60 shadow-inner group-hover:border-zinc-700/80 transition-colors">
+                  <div className="absolute inset-0 bg-zinc-900 animate-pulse" />
                   <img 
                     src={project.image} 
                     alt={`Скриншот сервиса ${project.name}`} 
-                    className="absolute inset-0 w-full h-full object-cover object-top opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700 ease-out"
                     loading="lazy"
                     onError={(e) => {
                       const target = e.currentTarget;
-                      target.style.display = 'none';
+                      if (!target.dataset.fallback) {
+                        target.dataset.fallback = 'true';
+                        target.src = `https://api.microlink.io/?url=https%3A%2F%2F${project.domain}&screenshot=true&meta=false&embed=screenshot.url`;
+                      }
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent opacity-90 group-hover:opacity-50 transition-opacity duration-500 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent opacity-85 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
 
                   {/* Domain Tag Badge */}
                   <div className="absolute top-3 sm:top-4 left-3 sm:left-4 px-2.5 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md border border-white/10 text-[11px] sm:text-xs font-mono text-zinc-300 z-20 flex items-center gap-1.5 shadow-md">
