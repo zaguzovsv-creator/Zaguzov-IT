@@ -27,8 +27,10 @@ export default function App() {
         <motion.a 
           initial={{ opacity: 0, y: -10 }} 
           animate={{ opacity: 1, y: 0 }}
-          href="mailto:info@zaguzov-it.ru" 
-          className="px-5 py-2.5 rounded-full bg-white text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-colors"
+          href="https://t.me/SergeiZaguzov" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-5 py-2.5 rounded-full bg-white text-zinc-950 text-sm font-medium hover:bg-zinc-200 transition-colors flex items-center gap-2"
         >
           Связаться
         </motion.a>
