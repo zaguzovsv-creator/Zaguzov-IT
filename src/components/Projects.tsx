@@ -12,7 +12,7 @@ export default function Projects() {
         transition={{ duration: 0.5 }}
         className="mb-12"
       >
-        <h2 className="text-3xl font-medium text-white tracking-tight">Реализованные проекты</h2>
+        <h2 className="text-3xl font-medium text-white tracking-tight">Реализованные нами проекты</h2>
         <p className="text-zinc-500 mt-2 text-lg">Продукты, которые активно используются нашими клиентами.</p>
       </motion.div>
 
