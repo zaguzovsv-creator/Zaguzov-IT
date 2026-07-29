@@ -99,6 +99,8 @@ export default function Projects() {
                           target.src = '/amkar.jpg';
                         } else if (project.id === 'tm-limited') {
                           target.src = '/tm_limited.jpg';
+                        } else if (project.id === 'sellers-cashback') {
+                          target.src = '/sellers_cashback.jpg';
                         } else if (project.id === 'stroy-tech') {
                           target.src = '/stroy_tech.jpg';
                         } else {

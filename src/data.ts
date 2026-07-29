@@ -59,7 +59,7 @@ export const projects: Project[] = [
     icon: TrendingUp,
     color: 'text-amber-400',
     bg: 'bg-amber-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fsellerscashback.ru&screenshot=true&meta=false&embed=screenshot.url'
+    image: '/sellers_cashback.jpg'
   },
   {
     id: 'stroy-tech',
