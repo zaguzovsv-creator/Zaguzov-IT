@@ -12,7 +12,6 @@ export interface Project {
   color: string;
   bg: string;
   image: string;
-  imageJpg: string;
 }
 
 export const CATEGORIES = [
@@ -34,8 +33,7 @@ export const projects: Project[] = [
     icon: Mic,
     color: 'text-emerald-400',
     bg: 'bg-emerald-400/10',
-    image: '/voice-psychology.webp',
-    imageJpg: '/voice-psychology.jpg'
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Fvoicepsychology.ru&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
     id: 'detector-lghi',
@@ -48,8 +46,7 @@ export const projects: Project[] = [
     icon: Activity,
     color: 'text-rose-400',
     bg: 'bg-rose-400/10',
-    image: '/detector-lghi.webp',
-    imageJpg: '/detector-lghi.jpg'
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Fdetectorlghi.ru&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
     id: 'sellers-cashback',
@@ -62,8 +59,7 @@ export const projects: Project[] = [
     icon: TrendingUp,
     color: 'text-amber-400',
     bg: 'bg-amber-400/10',
-    image: '/sellers-cashback.webp',
-    imageJpg: '/sellers-cashback.jpg'
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Fsellerscashback.ru&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
     id: 'stroy-tech',
@@ -76,8 +72,7 @@ export const projects: Project[] = [
     icon: Truck,
     color: 'text-cyan-400',
     bg: 'bg-cyan-400/10',
-    image: '/stroy-tech.webp',
-    imageJpg: '/stroy-tech.jpg'
+    image: '/stroy_tech.jpg'
   },
   {
     id: 'your-best-way',
@@ -90,8 +85,7 @@ export const projects: Project[] = [
     icon: Compass,
     color: 'text-indigo-400',
     bg: 'bg-indigo-400/10',
-    image: '/your-best-way.webp',
-    imageJpg: '/your-best-way.jpg'
+    image: 'https://api.microlink.io/?url=https%3A%2F%2Fyourbestway.ru&screenshot=true&meta=false&embed=screenshot.url'
   },
   {
     id: 'amkar-junior',
@@ -104,8 +98,7 @@ export const projects: Project[] = [
     icon: Users,
     color: 'text-orange-400',
     bg: 'bg-orange-400/10',
-    image: '/amkar-junior.webp',
-    imageJpg: '/amkar-junior.jpg'
+    image: '/amkar.jpg'
   },
   {
     id: 'tm-limited',
@@ -118,7 +111,6 @@ export const projects: Project[] = [
     icon: BarChart3,
     color: 'text-blue-400',
     bg: 'bg-blue-400/10',
-    image: '/tm-limited.webp',
-    imageJpg: '/tm-limited.jpg'
+    image: '/tm_limited.jpg'
   }
 ];

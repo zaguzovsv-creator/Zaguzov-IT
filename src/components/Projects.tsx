@@ -85,25 +85,28 @@ export default function Projects() {
 
                 {/* Screenshot Container */}
                 <div className="relative w-full h-48 sm:h-60 md:h-64 lg:h-72 rounded-[1.25rem] sm:rounded-[1.5rem] overflow-hidden bg-zinc-950 mb-4 border border-zinc-800/60 shadow-inner group-hover:border-zinc-700/80 transition-colors">
-                  <div className="absolute inset-0 bg-zinc-900 animate-pulse pointer-events-none" />
-                  <picture>
-                    <source srcset={project.image} type="image/webp" />
-                    <img 
-                      src={project.imageJpg || project.image} 
-                      alt={`Скриншот сервиса ${project.name}`} 
-                      className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-500 ease-out"
-                      loading={i < 3 ? "eager" : "lazy"}
-                      {...(i < 3 ? { fetchPriority: "high" as const } : {})}
-                      decoding="async"
-                      onError={(e) => {
-                        const target = e.currentTarget;
-                        if (!target.dataset.fallback) {
-                          target.dataset.fallback = 'true';
-                          target.src = project.imageJpg || project.image;
+                  <div className="absolute inset-0 bg-zinc-900 animate-pulse" />
+                  <img 
+                    src={project.image} 
+                    alt={`Скриншот сервиса ${project.name}`} 
+                    className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700 ease-out"
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (!target.dataset.fallback) {
+                        target.dataset.fallback = 'true';
+                        if (project.id === 'amkar-junior') {
+                          target.src = '/amkar.jpg';
+                        } else if (project.id === 'tm-limited') {
+                          target.src = '/tm_limited.jpg';
+                        } else if (project.id === 'stroy-tech') {
+                          target.src = '/stroy_tech.jpg';
+                        } else {
+                          target.src = `https://api.microlink.io/?url=https%3A%2F%2F${project.domain}&screenshot=true&meta=false&embed=screenshot.url`;
                         }
-                      }}
-                    />
-                  </picture>
+                      }
+                    }}
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/20 to-transparent opacity-85 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
 
                   {/* Domain Tag Badge */}
