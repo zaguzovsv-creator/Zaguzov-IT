@@ -12,6 +12,7 @@ export interface Project {
   color: string;
   bg: string;
   image: string;
+  imageJpg: string;
 }
 
 export const CATEGORIES = [
@@ -33,7 +34,8 @@ export const projects: Project[] = [
     icon: Mic,
     color: 'text-emerald-400',
     bg: 'bg-emerald-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fvoicepsychology.ru&screenshot=true&meta=false&embed=screenshot.url'
+    image: '/voice-psychology.webp',
+    imageJpg: '/voice-psychology.jpg'
   },
   {
     id: 'detector-lghi',
@@ -46,7 +48,8 @@ export const projects: Project[] = [
     icon: Activity,
     color: 'text-rose-400',
     bg: 'bg-rose-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fdetectorlghi.ru&screenshot=true&meta=false&embed=screenshot.url'
+    image: '/detector-lghi.webp',
+    imageJpg: '/detector-lghi.jpg'
   },
   {
     id: 'sellers-cashback',
@@ -59,46 +62,8 @@ export const projects: Project[] = [
     icon: TrendingUp,
     color: 'text-amber-400',
     bg: 'bg-amber-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fsellerscashback.ru&screenshot=true&meta=false&embed=screenshot.url'
-  },
-  {
-    id: 'tm-limited',
-    name: 'TM LIMITED',
-    url: 'https://tmlimited.shop',
-    domain: 'tmlimited.shop',
-    desc: 'Сервис глубокой аналитики, оптимизации продаж для бренда TM LIMITED.',
-    category: 'E-Commerce & Маркетплейсы',
-    tags: ['E-Commerce', 'Sales Tech', 'Retail'],
-    icon: BarChart3,
-    color: 'text-blue-400',
-    bg: 'bg-blue-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Ftmlimited.shop&screenshot=true&meta=false&embed=screenshot.url'
-  },
-  {
-    id: 'your-best-way',
-    name: 'Узнай свой путь',
-    url: 'https://yourbestway.ru',
-    domain: 'yourbestway.ru',
-    desc: 'Сервис определения своего предназначения, психологических ориентиров.',
-    category: 'AI & Аналитика',
-    tags: ['Web SaaS', 'Personalization'],
-    icon: Compass,
-    color: 'text-indigo-400',
-    bg: 'bg-indigo-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fyourbestway.ru&screenshot=true&meta=false&embed=screenshot.url'
-  },
-  {
-    id: 'amkar-junior',
-    name: 'АмкарДжуниор',
-    url: 'https://amkarjunior.ru',
-    domain: 'amkarjunior.ru',
-    desc: 'Комплексная платформа детской футбольной школы с личными кабинетами для тренеров и родителей учеников.',
-    category: 'Платформы & B2B',
-    tags: ['Sports CRM', 'EdTech', 'Portal'],
-    icon: Users,
-    color: 'text-orange-400',
-    bg: 'bg-orange-400/10',
-    image: '/amkar.jpg'
+    image: '/sellers-cashback.webp',
+    imageJpg: '/sellers-cashback.jpg'
   },
   {
     id: 'stroy-tech',
@@ -111,6 +76,49 @@ export const projects: Project[] = [
     icon: Truck,
     color: 'text-cyan-400',
     bg: 'bg-cyan-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fstroytechnology.site&screenshot=true&meta=false&embed=screenshot.url&waitFor=3000'
+    image: '/stroy-tech.webp',
+    imageJpg: '/stroy-tech.jpg'
+  },
+  {
+    id: 'your-best-way',
+    name: 'Узнай свой путь',
+    url: 'https://yourbestway.ru',
+    domain: 'yourbestway.ru',
+    desc: 'Сервис определения своего предназначения, психологических ориентиров.',
+    category: 'AI & Аналитика',
+    tags: ['Web SaaS', 'Personalization'],
+    icon: Compass,
+    color: 'text-indigo-400',
+    bg: 'bg-indigo-400/10',
+    image: '/your-best-way.webp',
+    imageJpg: '/your-best-way.jpg'
+  },
+  {
+    id: 'amkar-junior',
+    name: 'АмкарДжуниор',
+    url: 'https://amkarjunior.ru',
+    domain: 'amkarjunior.ru',
+    desc: 'Комплексная платформа детской футбольной школы с личными кабинетами для тренеров и родителей учеников.',
+    category: 'Платформы & B2B',
+    tags: ['Sports CRM', 'EdTech', 'Portal'],
+    icon: Users,
+    color: 'text-orange-400',
+    bg: 'bg-orange-400/10',
+    image: '/amkar-junior.webp',
+    imageJpg: '/amkar-junior.jpg'
+  },
+  {
+    id: 'tm-limited',
+    name: 'TM LIMITED',
+    url: 'https://tmlimited.shop',
+    domain: 'tmlimited.shop',
+    desc: 'Сервис глубокой аналитики, оптимизации продаж для бренда TM LIMITED.',
+    category: 'E-Commerce & Маркетплейсы',
+    tags: ['E-Commerce', 'Sales Tech', 'Retail'],
+    icon: BarChart3,
+    color: 'text-blue-400',
+    bg: 'bg-blue-400/10',
+    image: '/tm-limited.webp',
+    imageJpg: '/tm-limited.jpg'
   }
 ];
