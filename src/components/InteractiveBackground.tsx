@@ -43,16 +43,20 @@ export default function InteractiveBackground() {
     rawMouseX.set(0);
     rawMouseY.set(0);
 
+    let rafId: number | null = null;
     const handlePointerMove = (e: PointerEvent) => {
-      // Offset from screen center for subtle parallax
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
-      
-      rawMouseX.set(e.clientX - centerX);
-      rawMouseY.set(e.clientY - centerY);
+      if (rafId !== null) return;
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        
+        rawMouseX.set(e.clientX - centerX);
+        rawMouseY.set(e.clientY - centerY);
 
-      spotlightX.set(e.clientX);
-      spotlightY.set(e.clientY);
+        spotlightX.set(e.clientX);
+        spotlightY.set(e.clientY);
+      });
     };
 
     // Set initial spotlight pos
@@ -61,6 +65,7 @@ export default function InteractiveBackground() {
 
     window.addEventListener('pointermove', handlePointerMove, { passive: true });
     return () => {
+      if (rafId !== null) cancelAnimationFrame(rafId);
       window.removeEventListener('pointermove', handlePointerMove);
     };
   }, [rawMouseX, rawMouseY, spotlightX, spotlightY]);

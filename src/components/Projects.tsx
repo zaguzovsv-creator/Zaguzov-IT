@@ -90,11 +90,13 @@ export default function Projects() {
                     src={project.image} 
                     alt={`Скриншот сервиса ${project.name}`} 
                     className="absolute inset-0 w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-[1.03] transition-all duration-700 ease-out"
-                    loading="lazy"
+                    loading={i < 4 ? "eager" : "lazy"}
+                    decoding="async"
+                    fetchPriority={i < 2 ? "high" : "auto"}
                     onError={(e) => {
                       const target = e.currentTarget;
-                      if (!target.dataset.fallback) {
-                        target.dataset.fallback = 'true';
+                      if (!target.dataset.fallbackLevel) {
+                        target.dataset.fallbackLevel = '1';
                         if (project.id === 'amkar-junior') {
                           target.src = '/amkar.jpg';
                         } else if (project.id === 'tm-limited') {
@@ -106,6 +108,9 @@ export default function Projects() {
                         } else {
                           target.src = `https://api.microlink.io/?url=https%3A%2F%2F${project.domain}&screenshot=true&meta=false&embed=screenshot.url`;
                         }
+                      } else if (target.dataset.fallbackLevel === '1') {
+                        target.dataset.fallbackLevel = '2';
+                        target.src = `https://api.microlink.io/?url=https%3A%2F%2F${project.domain}&screenshot=true&meta=false&embed=screenshot.url`;
                       }
                     }}
                   />

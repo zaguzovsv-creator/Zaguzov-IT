@@ -59,7 +59,7 @@ export const projects: Project[] = [
     icon: TrendingUp,
     color: 'text-amber-400',
     bg: 'bg-amber-400/10',
-    image: '/sellers_cashback.jpg'
+    image: '/sellers_cashback.webp'
   },
   {
     id: 'stroy-tech',
@@ -72,7 +72,7 @@ export const projects: Project[] = [
     icon: Truck,
     color: 'text-cyan-400',
     bg: 'bg-cyan-400/10',
-    image: '/stroy_tech.jpg'
+    image: '/stroy_tech.webp'
   },
   {
     id: 'your-best-way',
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     icon: Users,
     color: 'text-orange-400',
     bg: 'bg-orange-400/10',
-    image: '/amkar.jpg'
+    image: '/amkar.webp'
   },
   {
     id: 'tm-limited',
@@ -111,6 +111,6 @@ export const projects: Project[] = [
     icon: BarChart3,
     color: 'text-blue-400',
     bg: 'bg-blue-400/10',
-    image: '/tm_limited.jpg'
+    image: '/tm_limited.webp'
   }
 ];
