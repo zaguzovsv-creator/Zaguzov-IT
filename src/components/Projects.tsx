@@ -105,6 +105,12 @@ export default function Projects() {
                           target.src = '/sellers_cashback.jpg';
                         } else if (project.id === 'stroy-tech') {
                           target.src = '/stroy_tech.jpg';
+                        } else if (project.id === 'voice-psychology') {
+                          target.src = '/voice_psychology.jpg';
+                        } else if (project.id === 'detector-lghi') {
+                          target.src = '/detector_lghi.jpg';
+                        } else if (project.id === 'your-best-way') {
+                          target.src = '/your_best_way.jpg';
                         } else {
                           target.src = `https://api.microlink.io/?url=https%3A%2F%2F${project.domain}&screenshot=true&meta=false&embed=screenshot.url`;
                         }

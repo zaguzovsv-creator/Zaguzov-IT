@@ -33,7 +33,7 @@ export const projects: Project[] = [
     icon: Mic,
     color: 'text-emerald-400',
     bg: 'bg-emerald-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fvoicepsychology.ru&screenshot=true&meta=false&embed=screenshot.url'
+    image: '/voice_psychology.webp'
   },
   {
     id: 'detector-lghi',
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     icon: Activity,
     color: 'text-rose-400',
     bg: 'bg-rose-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fdetectorlghi.ru&screenshot=true&meta=false&embed=screenshot.url'
+    image: '/detector_lghi.webp'
   },
   {
     id: 'sellers-cashback',
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     icon: Compass,
     color: 'text-indigo-400',
     bg: 'bg-indigo-400/10',
-    image: 'https://api.microlink.io/?url=https%3A%2F%2Fyourbestway.ru&screenshot=true&meta=false&embed=screenshot.url'
+    image: '/your_best_way.webp'
   },
   {
     id: 'amkar-junior',
